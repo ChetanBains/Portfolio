@@ -1,409 +1,553 @@
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
-    html {
-        font-size: 10px;
-        font-family: 'Montserrat', sans-serif;
-        color: white;
-    }
-    
-    a {
-        text-decoration: none;
-    }
-    
-    .container {
-        min-height: 110vh;
-        width: 100%;
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-    }
-    
-    img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-    }
-    
-    #hero .social-icon {
-        position: relative;
-        left: 60px;
-        top: 510px;
-        width: 100%;
-    }
-    
-    #hero .social-icon .social-item {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: left;
-    }
-    
-    #hero .social-icon .social-item a {
-        background-color: black;
-        border-radius: 70%;
-        margin-left: 50px;
-        animation: pulse 2s infinite;
-    }
-    
-    @keyframes pulse {
-        0% {
-            transform: scale(0.9);
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        50% {
-            transform: scale(1);
-        }
-        100% {
-            transform: scale(0.9);
-            color: cyan;
-        }
-    }
-    
-    #hero .social-icon .social-item a {}
-    /* Hero Section */
-    
-    #hero {
-        background-image: url(/images/main.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: top left;
-        position: relative;
-        z-index: 1;
-        color: black;
-    }
-    
-    #hero::after {
-        position: absolute;
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        background-color: black;
-        opacity: .2;
-        z-index: -1;
-    }
-    
-    #hero .hero {
-        max-width: 2000px;
-        margin: 0 auto;
-        padding: 100px 50px;
-        justify-content: flex-start;
-    }
-    
-    #hero h1 {
-        display: block;
-        width: fit-content;
-        font-size: 4rem;
-        position: relative;
-        color: transparent;
-        animation: text_reveal .5s ease forwards;
-        animation-delay: 1.5s;
-    }
-    
-    #hero h1:nth-child(1) {
-        animation-delay: 1s;
-    }
-    
-    #hero h1:nth-child(2) {
-        animation-delay: 2s;
-    }
-    
-    #hero h1:nth-child(3) {
-        animation: text_reveal_name 1 ease forwards;
-        animation-delay: 3s;
-    }
-    
-    #hero h1 span {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 0;
-        background-color: cyan;
-        animation: text_reveal_box 1s ease;
-        animation-delay: 1s;
-    }
-    
-    #hero h1:nth-child(1) span {
-        animation-delay: .5s;
-    }
-    
-    #hero h1:nth-child(2) span {
-        animation-delay: 1.5s;
-    }
-    
-    #hero h1:nth-child(3) span {
-        animation-delay: 2.5s;
-    }
-    
-    #hero .cta {
-        display: inline-block;
-        padding: 5px 15px;
-        color: white;
-        background-color: transparent;
-        border: 2px solid cyan;
-        font-size: 1rem;
-        text-transform: uppercase;
-        letter-spacing: .1rem;
-        margin-top: 20px;
-        transition: .3s ease background-color;
-        transition-property: background-color, color;
-    }
-    
-    #hero .cta:hover {
-        color: white;
-        background-color: cyan;
-    }
-    /* End Hero Section */
-    /* SERVICE Section */
-    
-    #services {
-        background-color: black;
-    }
-    
-    #services .service {
-        flex-direction: column;
-        text-align: center;
-        max-width: 1500px;
-        margin: 0 auto;
-        padding: 100px 0;
-    }
-    
-    #services .section-title {
-        font-size: 4rem;
-        font-weight: 300;
-        color: white;
-        margin-bottom: 10px;
-        text-transform: uppercase;
-        letter-spacing: .2rem;
-        text-align: center;
-    }
-    
-    #services .section-title span {
-        color: cyan;
-    }
-    
-    #services .service-top {
-        font: 1.4rem;
-        margin-top: 5px;
-        line-height: 2.5rem;
-        font-weight: 300;
-        letter-spacing: .05rem;
-    }
-    
-    #services .service-top {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    
-    #services .service-item {
-        flex-basis: 80%;
-        display: flex;
-        align-items: flex-start;
-        flex-direction: column;
-        padding: 30px;
-        border-radius: 10px;
-        background-size: cover;
-        background-image: url(./images/texture-stone-concrete-wall-dark-green-color_75163-134.jpg);
-        margin: 10px 5%;
-    }
-    
-    #service .service-bottom .icon {
-        height: 50px;
-        width: 50px;
-        margin-bottom: 20px;
-    }
-    /* End SERVICE Section */
-    /* Project Section */
-    
-    #projects .section-title {
-        text-align: center;
-        font-size: 3rem;
-        font-weight: 300;
-        color: black;
-        margin-bottom: 10px;
-        text-transform: uppercase;
-        letter-spacing: .1rem;
-    }
-    
-    #projects .projects {
-        flex-direction: column;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 100px 0;
-    }
-    
-    #projects .projects-header h1 {
-        margin-bottom: 50px;
-        text-align: center;
-    }
-    
-    #projects .all-projects {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-    
-    #projects .projects-item {
-        display: flex;
-        align-items: center;
-        justify-content: centre;
-        flex-direction: column;
-        width: 80%;
-        margin: 20px;
-        overflow: hidden;
-        border-radius: 10px;
-    }
-    
-    #projects .projects-info {
-        padding: 30px;
-        flex-basis: 50%;
-        background-color: black;
-        height: 100%;
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        flex-direction: column;
-    }
-    
-    #projects .projects-info h1 {
-        font-size: 4rem;
-        font-weight: 500;
-    }
-    
-    #projects .projects-info h2 {
-        font-size: 1.8rem;
-        font-weight: 500;
-        margin-top: 10px;
-    }
-    
-    #projects .projects-info p {}
-    
-    #projects .projects-img {
-        flex-basis: 50%;
-        height: 300px;
-        overflow: hidden;
-        position: relative;
-    }
-    
-    #projects .projects-img:after {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        background-color: cyan;
-        opacity: .2;
-    }
-    
-    #projects .projects-img img {
-        transition: .3s ease transform;
-    }
-    
-    #projects .projects-item:hover .projects-img img {
-        transform: scale(1.1);
-    }
-    /* End Project Section */
-    /* About Section */
-    
-    #about .about {
-        flex-direction: column-reverse;
-        text-align: center;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 120px 20px;
-    }
-    
-    #about .col-left .about-img {
-        width: 280px;
-        height: 360px;
-    }
-    
-    #about .col-right {
-        width: 100%;
-    }
-    
-    #about .col-right h2 {
-        font-size: 3.5rem;
-        font-weight: 500;
-        letter-spacing: .2rem;
-        margin-bottom: 10px;
-        color: black;
-    }
-    
-    #about .col-right p {
-        margin-bottom: 20px;
-        color: black;
-    }
-    
-    #about .cta {
-        display: inline-block;
-        padding: 5px 15px;
-        color: black;
-        background-color: transparent;
-        border: 2px solid cyan;
-        font-size: 1rem;
-        text-transform: uppercase;
-        letter-spacing: .1rem;
-        margin-top: 30px;
-        margin-bottom: 50px;
-        transition: .3s ease background-color;
-        transition-property: background-color, color;
-    }
-    
-    #about .cta:hover {
-        color: white;
-        background-color: cyan;
-    }
-    
-    #about .col-left .about-img {
-        position: relative;
-        border: 10px solid white;
-    }
-    
-    #about .col-left .about-img::after {
-        content: '';
-        position: absolute;
-        left: -33;
-        top: 19px;
-        height: 98%;
-        width: 98%;
-        border: 7px solid cyan;
-        z-index: -1;
-    }
-    /* EndAbout Section */
-    /* Keyframes */
-    
-    @keyframes text_reveal_box {
-        50% {
-            width: 100%;
-            left: 0;
-        }
-        100% {
-            width: 0;
-            left: 100%;
-            color: white
-        }
-    }
-    
-    @keyframes text_reveal {
-        100% {
+        
+        html {
+            font-size: 10px;
+            font-family: 'Montserrat', sans-serif;
             color: white;
         }
-    }
-    
-    @keyframes text_reveal_name {
-        100% {
+        
+        a {
+            text-decoration: none;
+        }
+        
+        .container {
+            min-height: 110vh;
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+        }
+        
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        /* Header Section */
+        
+        #header {
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: auto;
+        }
+        
+        #header .header {
+            min-height: 8vh;
+            background-color: black;
+            transition: 0.3s ease background-color;
+        }
+        
+        #header .header .brand h1 {
+            font-size: 2rem;
+            letter-spacing: 5px;
+        }
+        
+        #header .header .brand h1 span {
             color: cyan;
+        }
+        
+        .header .nav-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            height: 100%;
+            max-width: 1350px;
+            padding: 0 10px;
+        }
+        
+        #header .nav-list ul {
+            list-style: none;
+            position: absolute;
+            background-color: black;
+            width: 100vw;
+            height: 100vh;
+            left: 100%;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            z-index: 1;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+            transition: .5s ease left;
+        }
+        
+        #header .nav-list ul.active {
+            left: 0;
+        }
+        
+        #header .nav-bar ul a {
+            font-size: 2rem;
+            font-weight: 500;
+            letter-spacing: .2rem;
+            text-decoration: none;
+            color: white;
+            text-transform: uppercase;
+            padding: 20px;
+            display: block;
+        }
+        
+        #header .nav-bar ul a::hover {
+            color: cyan;
+        }
+        
+        #header .hamburger {
+            height: 60px;
+            width: 60px;
+            display: inline-block;
+            border: 3px solid cyan;
+            border-radius: 50%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+            cursor: pointer;
+            transform: scale(.5);
+        }
+        
+        #header .hamburger .bar {
+            height: 2px;
+            width: 30px;
+            position: relative;
+            background-color: cyan;
+            z-index: -1;
+        }
+        
+        #header .hamburger .bar a span {
+            color: white;
+        }
+        
+        #header .hamburger .bar::after,
+        #header .hamburger .bar::before {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            background-color: cyan;
+            transition: 0.3s ease;
+            transition-property: top, bottom;
+        }
+        
+        #header .hamburger .bar::after {
+            top: 8px;
+            ;
+        }
+        
+        #header .hamburger .bar::before {
+            bottom: 8px;
+            ;
+        }
+        /* End Header Section */
+        /* Hero Section */
+        
+        #hero .social-icon {
+            position: relative;
+            left: 60px;
+            top: 510px;
+            width: 100%;
+        }
+        
+        #hero .social-icon .social-item {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: left;
+        }
+        
+        #hero .social-icon .social-item a {
+            background-color: black;
+            border-radius: 20%;
+            margin-left: 25px;
+            animation: pulse 2s infinite;
+        }
+        
+        #hero .social-icon .social-item a {}
+        
+        #hero {
+            background-image: url(/images/main.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top left;
+            position: relative;
+            z-index: 1;
+            color: black;
+        }
+        
+        #hero::after {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background-color: black;
+            opacity: .2;
+            z-index: -1;
+        }
+        
+        #hero .hero {
+            max-width: 2000px;
+            margin: 0 auto;
+            padding: 100px 50px;
+            justify-content: flex-start;
+        }
+        
+        #hero h1 {
+            display: block;
+            width: fit-content;
+            font-size: 4rem;
+            position: relative;
+            color: transparent;
+            animation: text_reveal .5s ease forwards;
+            animation-delay: 1.5s;
+        }
+        
+        #hero h1:nth-child(1) {
+            animation-delay: 1s;
+        }
+        
+        #hero h1:nth-child(2) {
+            animation-delay: 2s;
+        }
+        
+        #hero h1:nth-child(3) {
+            animation: text_reveal_name 1 ease forwards;
+            animation-delay: 3s;
+        }
+        
+        #hero h1 span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0;
+            background-color: cyan;
+            animation: text_reveal_box 1s ease;
+            animation-delay: 1s;
+        }
+        
+        #hero h1:nth-child(1) span {
+            animation-delay: .5s;
+        }
+        
+        #hero h1:nth-child(2) span {
+            animation-delay: 1.5s;
+        }
+        
+        #hero h1:nth-child(3) span {
+            animation-delay: 2.5s;
+        }
+        
+        #hero .cta {
+            display: inline-block;
+            padding: 5px 15px;
+            color: white;
+            background-color: transparent;
+            border: 2px solid cyan;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: .1rem;
+            margin-top: 20px;
+            transition: .3s ease background-color;
+            transition-property: background-color, color;
+        }
+        
+        #hero .cta:hover {
+            color: white;
+            background-color: cyan;
+        }
+        /* End Hero Section */
+        /* SERVICE Section */
+        
+        #services {
+            background-color: black;
+        }
+        
+        #services .service {
+            flex-direction: column;
+            text-align: center;
+            max-width: 1500px;
+            margin: 0 auto;
+            padding: 100px 0;
+        }
+        
+        #services .section-title {
+            font-size: 4rem;
+            font-weight: 300;
+            color: white;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: .2rem;
+            text-align: center;
+        }
+        
+        #services .section-title span {
+            color: cyan;
+        }
+        
+        #services .service-top {
+            font: 1.4rem;
+            margin-top: 5px;
+            line-height: 2.5rem;
+            font-weight: 300;
+            letter-spacing: .05rem;
+        }
+        
+        #services .service-top {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        #services .service-item {
+            flex-basis: 80%;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            padding: 30px;
+            border-radius: 10px;
+            background-size: cover;
+            background-image: url(./images/texture-stone-concrete-wall-dark-green-color_75163-134.jpg);
+            margin: 10px 5%;
+        }
+        
+        #service .service-bottom .icon {
+            height: 50px;
+            width: 50px;
+            margin-bottom: 20px;
+        }
+        /* End SERVICE Section */
+        /* Project Section */
+        
+        #projects .section-title {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 300;
+            color: black;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: .1rem;
+        }
+        
+        #projects .projects {
+            flex-direction: column;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 100px 0;
+        }
+        
+        #projects .projects-header h1 {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        
+        #projects .all-projects {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        
+        #projects .projects-item {
+            display: flex;
+            align-items: center;
+            justify-content: centre;
+            flex-direction: column;
+            width: 80%;
+            margin: 20px;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        
+        #projects .projects-info {
+            padding: 30px;
+            flex-basis: 50%;
+            background-color: black;
+            height: 100%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+        }
+        
+        #projects .projects-info h1 {
+            font-size: 4rem;
             font-weight: 500;
         }
-    }
-    /*  End keyframes  */
+        
+        #projects .projects-info h2 {
+            font-size: 1.8rem;
+            font-weight: 500;
+            margin-top: 10px;
+        }
+        
+        #projects .projects-info p {}
+        
+        #projects .projects-img {
+            flex-basis: 50%;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        #projects .projects-img:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background-color: cyan;
+            opacity: .2;
+        }
+        
+        #projects .projects-img img {
+            transition: .3s ease transform;
+        }
+        
+        #projects .projects-item:hover .projects-img img {
+            transform: scale(1.1);
+        }
+        /* End Project Section */
+        /* About Section */
+        
+        #about .about {
+            flex-direction: column-reverse;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 120px 20px;
+        }
+        
+        #about .col-left .about-img {
+            width: 280px;
+            height: 360px;
+        }
+        
+        #about .col-right {
+            width: 100%;
+        }
+        
+        #about .col-right h2 {
+            font-size: 3.5rem;
+            font-weight: 500;
+            letter-spacing: .2rem;
+            margin-bottom: 10px;
+            color: black;
+        }
+        
+        #about .col-right p {
+            margin-bottom: 20px;
+            color: black;
+        }
+        
+        #about .cta {
+            display: inline-block;
+            padding: 5px 15px;
+            color: black;
+            background-color: transparent;
+            border: 2px solid cyan;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: .1rem;
+            margin-top: 30px;
+            margin-bottom: 50px;
+            transition: .3s ease background-color;
+            transition-property: background-color, color;
+        }
+        
+        #about .cta:hover {
+            color: white;
+            background-color: cyan;
+        }
+        
+        #about .col-left .about-img {
+            position: relative;
+            border: 10px solid white;
+        }
+        
+        #about .col-left .about-img::after {
+            content: '';
+            position: absolute;
+            left: -33;
+            top: 19px;
+            height: 98%;
+            width: 98%;
+            border: 7px solid cyan;
+            z-index: -1;
+        }
+        /* EndAbout Section */
+        /* Keyframes */
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(0.9);
+            }
+            50% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(0.9);
+                color: cyan;
+            }
+        }
+        
+        @keyframes text_reveal_box {
+            50% {
+                width: 100%;
+                left: 0;
+            }
+            100% {
+                width: 0;
+                left: 100%;
+                color: white
+            }
+        }
+        
+        @keyframes text_reveal {
+            100% {
+                color: white;
+            }
+        }
+        
+        @keyframes text_reveal_name {
+            100% {
+                color: cyan;
+                font-weight: 500;
+            }
+        }
+        /*  End keyframes  */
+        /* Media Query for Desktop */
+        
+        @media only screen and (min-width:1200px) {
+            /* Header */
+            #header .hamburger {
+                display: none;
+            }
+            #header .nav-list ul {
+                position: initial;
+                display: block;
+                height: auto;
+                width: fit-content;
+                background-color: transparent;
+            }
+            #header .nav-list ul li {
+                display: inline-block;
+            }
+            #header .nav-list ul a:after {
+                display: none;
+            }
+            /* End Header */
+        }
+        /* End Media Query for Desktop */
