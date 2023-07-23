@@ -188,7 +188,7 @@
         }
 
         #hero {
-            background-image: url(../public/images/main.jpg);
+            background-image: url('images/main.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: top left;
