@@ -1,8 +1,20 @@
-// Use descriptive variable names
-const hamburger = document.querySelector('.header .nav-bar .hamburger .bar');
-const mobile_menu = document.querySelector('.header .nav-list ul');
-const header = document.querySelector('#header');
+const hamburger = document.querySelector('.hamburger');
+const navList = document.querySelector('.nav-list ul');
+const navLinks = document.querySelectorAll('.nav-list ul li a');
 
+
+hamburger.addEventListener('click', () => {
+  navList.classList.toggle('open');
+  hamburger.classList.toggle('active');
+});
+
+
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    navList.classList.remove('open');
+    hamburger.classList.remove('active');
+  });
+});
 hamburger.addEventListener('click', () => {
     mobile_menu.classList.toggle('active');
 });
@@ -15,6 +27,22 @@ document.addEventListener('scroll', () => {
         header.style.backgroundColor = "white";
     }
 });
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+  
+      const targetId = this.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
+  
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
 
 
 /* --------------- MAP function -----------*/
